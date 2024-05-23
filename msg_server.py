@@ -3,20 +3,23 @@ import socket
 import threading
 import json
 
-SERVER_NAME = ""
-HOST = 'localhost'
-PORT = 8000
+SERVER_NAME = ''
+HOST = ''
+
+
 
 def _handle_connection(socket):
     print('Handling connection with: ', socket.getpeername())
     data = socket.recv(1024)
     print(data)
 
-def run_multithreaded():
-    print('this is multithreaded')
+def initiate_server(port, isMulti):
     
-def run_singlethreaded():
-    print('this is singlethreaded')
+    if isMulti == True:
+        
+        print('this is multithreaded')
+    else:
+        print('this is singlethreaded')
 
 #main
 if __name__=="__main__":
@@ -28,7 +31,7 @@ if __name__=="__main__":
     
     if (len(sys.argv) > 2 and sys.argv[2] == '-m'):
         #multithreaded
-        run_multithreaded()
+        initiate_server(port, isMulti=True)
     else:
         #singlethreaded
-        run_singlethreaded()
+        initiate_server(port, isMulti=False)
