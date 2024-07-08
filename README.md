@@ -1,5 +1,5 @@
-# comp3010a1
-## COMP3010 Assignment 1: Message Board Server
+# Message Board Server
+
 ### Part 1:
 
 **Start the server**
@@ -23,6 +23,7 @@ curl --data-binary @Cat03.jpg -H "Content-Type: image/jpeg" -X POST http://local
 
 ### Part 2:
 - Run `python3 testServer.py` to send various 100 requests
+
 - Run `python3 runThousandTest.py` to run the testServer.py 1000 times
 
 **Note: There is an option to run POST requests in `testServer.py` but it seems to be very inconsistent so it will run only GET requests by default*
